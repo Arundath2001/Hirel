@@ -1,0 +1,43 @@
+.login {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: row; 
+    position: relative; 
+}
+
+.login_left {
+    flex: 1;
+    background-image: linear-gradient(0deg, rgba(1, 110, 253, 0.41), rgba(1, 110, 253, 0.41)),
+        linear-gradient(0deg, #016efd67, #016efd68), url('../assets/loginside.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.login_right {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .login {
+        flex-direction: column; 
+        height: 100vh; 
+        position: relative; 
+    }
+
+    .login_left {
+        width: 100%; 
+        border-radius: 0; 
+    }
+
+    .login_right {
+        position: absolute;
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        z-index: 10; 
+    }
+}
