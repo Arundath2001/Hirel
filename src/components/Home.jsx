@@ -19,7 +19,7 @@ function Home() {
 
     const fetchUsers = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/users');
+            const response = await axios.get('https://warm-victorious-skirt.glitch.me/users');
             setUsers(response.data);
         } catch (error) {
             console.error('Error fetching users:', error);
@@ -36,7 +36,7 @@ function Home() {
         };
 
         try {
-            await axios.post('http://localhost:5000/users', newUser);
+            await axios.post('https://warm-victorious-skirt.glitch.me/users', newUser);
             fetchUsers(); 
         } catch (error) {
             console.error('Error adding user:', error);
@@ -58,7 +58,7 @@ function Home() {
     const handleDelete = async (userId) => {
         if (window.confirm('Are you sure you want to delete this user?')) {
             try {
-                await axios.delete(`http://localhost:5000/users/${userId}`);
+                await axios.delete(`https://warm-victorious-skirt.glitch.me/users/${userId}`);
                 fetchUsers();
                 alert('User deleted successfully');
             } catch (error) {
